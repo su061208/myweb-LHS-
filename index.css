@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+:root {
+    --primary-red: #da291c;
+    --bg-dark: #0f1113; /* 약간의 네이비 톤이 섞인 자연스러운 다크 */
+    --card-bg: #1a1d21;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: #2d333a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+/* Navigation: 더 깔끔하고 자연스럽게 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background: rgba(15, 17, 19, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    font-weight: 900; 
+    letter-spacing: 1px; 
+    color: var(--primary-red); 
+    font-size: 1.2rem;
+}
+
+.nav-links { display: flex; gap: 2.5rem; }
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text-muted); 
+    font-size: 0.9rem; 
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text-main); }
+
+/* Hero Section: 과하지 않은 웅장함 */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+}
+.hero h1 { 
+    font-size: 4.5rem; 
+    font-weight: 900; 
+    line-height: 1.1; 
+    margin-bottom: 2rem; 
+    letter-spacing: -2px; 
+}
+.highlight { color: var(--primary-red); }
+
+/* Buttons: 둥근 모서리로 더 자연스럽게 */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+.cta-button:hover { 
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(218, 41, 28, 0.3);
+}
+
+/* Projects & Cards */
+.glass-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card:hover { 
+    border-color: var(--primary-red);
+    transform: translateY(-5px);
+}
+
+.project-section {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin: 8rem 0;
+}
+.image-placeholder {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    aspect-ratio: 16/10;
+}
+.image-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+.so-what-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+}
+
+/* Animations */
+.animate-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
+.animate-in.visible { opacity: 1; transform: translateY(0); }
+
+footer {
+    padding: 6rem 5% 4rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+}

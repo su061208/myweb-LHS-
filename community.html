@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community | AMK Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .board-container { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; margin-top: 2rem; }
+        .board-header { 
+            display: grid; grid-template-columns: 80px 1fr 150px 150px; 
+            background: rgba(255,255,255,0.03); padding: 1.2rem; font-weight: 700; font-size: 0.85rem; border-bottom: 1px solid var(--border-color);
+        }
+        .board-row { 
+            display: grid; grid-template-columns: 80px 1fr 150px 150px; 
+            padding: 1.2rem; border-bottom: 1px solid var(--border-color); cursor: pointer; transition: 0.2s;
+        }
+        .board-row:hover { background: rgba(255,255,255,0.02); }
+        .reply-box { margin-top: 15px; padding: 15px; border-left: 2px solid var(--primary-red); background: rgba(0,0,0,0.2); font-size: 0.9rem; color: var(--text-muted); border-radius: 4px; }
+        .btn-group { display: flex; gap: 8px; margin-top: 15px; }
+        .small-btn { padding: 5px 12px; background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.75rem; cursor: pointer; border-radius: 4px; }
+        .small-btn:hover { border-color: var(--primary-red); color: white; }
+        
+        #postModal {
+            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: var(--card-bg); padding: 2.5rem; border: 1px solid var(--border-color); z-index: 2000; width: 450px; border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        #postModal input, #postModal textarea { 
+            width: 100%; margin: 10px 0; padding: 12px; background: rgba(0,0,0,0.2); color: white; border: 1px solid var(--border-color); border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">AMK_엔지니어_버전_1.0</div>
+        <div class="nav-links">
+            <a href="index.html">홈</a>
+            <a href="stack.html">기술 역량</a>
+            <a href="artifacts.html">프로젝트 산출물</a>
+            <a href="log.html">성장 기록</a>
+            <a href="community.html" class="active">커뮤니티</a>
+        </div>
+    </nav>
+
+    <main class="container" style="padding: 6rem 0;">
+        <div class="animate-in">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">FREE BOARD / <span class="highlight">Q&A</span></h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 4rem;">함께 성장하기 위한 소중한 의견을 남겨주세요.</p>
+        </div>
+
+        <button class="cta-button animate-in" onclick="openModal()" style="margin-bottom: 2rem;">게시글 작성</button>
+
+        <div class="board-container animate-in">
+            <div class="board-header">
+                <div>번호</div>
+                <div>제목 및 내용</div>
+                <div>작성자</div>
+                <div>날짜</div>
+            </div>
+            <div id="boardList"></div>
+        </div>
+
+        <div style="margin-top: 8rem; text-align: center;">
+            <a href="index.html" class="cta-button">홈으로 돌아가기</a>
+        </div>
+    </main>
+
+    <div id="postModal">
+        <h3 style="margin-bottom: 1rem;">게시글 작성</h3>
+        <input type="text" id="postAuthor" placeholder="작성자 성함">
+        <input type="text" id="postTitle" placeholder="제목">
+        <textarea id="postContent" placeholder="내용을 입력하세요"></textarea>
+        <div style="display: flex; gap: 10px; margin-top: 1rem;">
+            <button class="cta-button" onclick="savePost()" style="flex: 1;">등록하기</button>
+            <button class="cta-button" onclick="closeModal()" style="flex: 1; background: #23272b;">취소</button>
+        </div>
+    </div>
+
+    <script src="community.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function openModal() { document.getElementById('postModal').style.display = 'block'; }
+        function closeModal() { document.getElementById('postModal').style.display = 'none'; }
+    </script>
+</body>
+</html>
