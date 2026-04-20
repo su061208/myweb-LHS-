@@ -3,63 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMK Portfolio | Command Center</title>
+    <title>LHS Portfolio | Command Center</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <nav>
-        <div class="logo">AMK_엔지니어_버전_1.0</div>
+        <div class="logo">AMK <span style="color: var(--primary-red);">/ CE</span></div>
         <div class="nav-links">
             <a href="index.html" class="active">홈</a>
-            <a href="stack.html">기술 역량</a>
-            <a href="artifacts.html">프로젝트 산출물</a>
-            <a href="log.html">성장 기록</a>
+            <a href="tech_stack.html">기술 역량</a>
+            <a href="project_artifacts.html">프로젝트</a>
+            <a href="growth_log.html">성장 로그</a>
             <a href="community.html">커뮤니티</a>
+            <a href="contact.html">연락처</a>
         </div>
     </nav>
 
-    <main class="container">
+    <main>
         <section class="hero animate-in">
-            <p style="color: var(--primary-red); font-weight: 700; letter-spacing: 3px; margin-bottom: 1.5rem; font-family: 'Courier New', monospace;">[ MISSION: ZERO DOWNTIME ]</p>
-            <h1>THE <span class="highlight">PRECISION</span><br>UPTIME SPECIALIST</h1>
-            <p style="max-width: 700px; color: var(--text-muted); font-size: 1.2rem; line-height: 1.8; margin-bottom: 4rem;">
-                반도체 장비의 1초는 기업의 핵심 경쟁력입니다. 데이터 기술과 정밀 제어 로직을 결합하여, 
-                <span style="color: white; font-weight: bold;">AMK 설비의 다운타임 제로</span>를 실현할 준비된 엔지니어입니다.
-            </p>
+            <div class="hero-bg-wrapper">
+                <div class="hero-bg-image" style="--hero-bg: url('assets/images/hero.png');"></div>
+            </div>
             
-            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                <a href="artifacts.html" class="cta-button">실전 역량 증명 (Artifacts)</a>
-                <a href="stack.html" class="cta-button" style="background: transparent; border: 1px solid var(--border-color);">기술 스택 상세</a>
+            <!-- ETS Style Scroll Down Indicator -->
+            <div class="scroll-indicator">SCROLL DOWN</div>
+
+            <div class="container">
+                <div class="split-layout">
+                    <div>
+                        <span class="mission-tag">[ MISSION_ID: AMK_MAINTENANCE_CE ]</span>
+                        <h1 class="ets-lang-ko" style="font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 2rem; letter-spacing: -2px;">데이터와 논리로<br>가동률을 증명하는 <span style="color: var(--primary-red);">솔루션 파트너</span></h1>
+                        
+                        <p class="ets-lang-en" style="margin-bottom: 3.5rem; font-size: 1.25rem;">
+                            An engineering solution partner that proves equipment uptime through data and logic.<br>
+                            Going beyond simple technical support with <br><span style="color: var(--primary-red); font-weight: 700; font-size: 1.5rem; display: inline-block; margin-top: 10px;">'Logic of Intent'.</span>
+                        </p>
+                        
+                        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                            <a href="tech_stack.html" class="cta-button">View Skills &nbsp; &gt;</a>
+                            <a href="project_artifacts.html" class="cta-button" style="border-color: rgba(255,255,255,0.2); color: #fff;">View Projects &nbsp; &gt;</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted);">
+                            <p style="color: var(--primary-red); font-weight: bold; margin-bottom: 1.5rem; letter-spacing: 1px;">>> TARGET_SPECIFICATION</p>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.8rem;">
+                                    <span style="color: var(--primary-red);">ID NO:</span> 20252855
+                                </li>
+                                <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.8rem;">
+                                    <span style="color: var(--primary-red);">USER ID:</span> LHS
+                                </li>
+                                <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.8rem;">
+                                    <span style="color: var(--primary-red);">DEPT:</span> Robot S/W Engineering
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <span style="color: var(--primary-red);">CORE:</span> Logic of Intent
+                                </li>
+                            </ul>
+                            <div class="tech-log">
+                                SYSTEM_INTEGRITY: ANALYZING...<br>
+                                LOGIC_VERIFIED: 100%<br>
+                                STATUS: AMK_ENGINEER_READY
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 핵심 역량 인터랙티브 카드 -->
-        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding-bottom: 10rem;">
-            <div class="glass-card animate-in">
-                <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">LOGIC ANALYSIS</div>
-                <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">전기회로 분석</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">순차 및 복합 논리회로의 완벽한 이해를 바탕으로 한 하드웨어 근본 원인 분석 능력.</p>
-            </div>
-            <div class="glass-card animate-in" style="transition-delay: 0.1s;">
-                <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">CONTROL SYSTEM</div>
-                <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">PLC 정밀 설계</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">상태 축소 기법을 적용한 래더 다이어그램 설계를 통한 공정 효율 극대화 역량.</p>
-            </div>
-            <div class="glass-card animate-in" style="transition-delay: 0.2s;">
-                <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">INTELLIGENCE</div>
-                <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">AI 협업 역량</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">데이터 로깅 및 AI 분석 툴 활용을 통한 예지 보전(Predictive Maintenance) 수행력.</p>
-            </div>
-        </section>
+        <div class="container">
+            <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 10rem 0;">
+            <a href="tech_stack.html" class="glass-card animate-in" style="text-decoration: none; display: block;">
+                <div>
+                    <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">HARDWARE FUNDAMENTALS</div>
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">하드웨어 펀더멘털</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">오실로스코프를 활용한 회로 분석 및 SolidWorks 기반의 실제 CAD 설계 실무 역량.</p>
+                </div>
+                <div>
+                    <div class="tech-log">> CIRCUIT_ANALYSIS: OK<br>> CAD_DESIGN: OK</div>
+                    <div class="status-indicator">SYSTEM STATUS: OPTIMIZED</div>
+                </div>
+            </a>
+            <a href="tech_stack.html" class="glass-card animate-in" style="transition-delay: 0.1s; text-decoration: none; display: block;">
+                <div>
+                    <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">LOGIC & CONTROL</div>
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">논리 및 제어</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">디지털 논리 회로 설계 최적화 및 래더 다이어그램을 활용한 PLC 시퀀스 숙련도.</p>
+                </div>
+                <div>
+                    <div class="tech-log">> LOGIC_SYNC: OK<br>> PLC_SEQUENCE: OK</div>
+                    <div class="status-indicator">LOGIC: CALIBRATED</div>
+                </div>
+            </a>
+            <a href="tech_stack.html" class="glass-card animate-in" style="transition-delay: 0.2s; text-decoration: none; display: block;">
+                <div>
+                    <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">AI COLLABORATION</div>
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">AI 협업 역량</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">바이브 코딩(Vibe Coding)을 활용하여 AI와 협업하고 제어 로직의 효율을 극대화하는 능력.</p>
+                </div>
+                <div>
+                    <div class="tech-log">> VIBE_CODING: ACTIVE<br>> PROMPT_EFFICIENCY: HIGH</div>
+                    <div class="status-indicator">INTEL: SYNCHRONIZED</div>
+                </div>
+            </a>
+            </section>
+        </div>
     </main>
 
+
     <footer>
-        <div style="margin-bottom: 2rem; display: flex; justify-content: center; gap: 4rem; font-weight: bold; font-size: 1rem;">
-            <a href="mailto:your-email@outlook.com" style="color: var(--text-main); text-decoration: none;">EMAIL</a>
-            <a href="https://github.com/your-username" target="_blank" style="color: var(--text-main); text-decoration: none;">GITHUB</a>
-            <a href="#" style="color: var(--text-main); text-decoration: none;">LINKEDIN / OPIC</a>
+        <div style="margin-bottom: 4rem; display: flex; justify-content: center; gap: 4rem; font-weight: bold; font-size: 1rem;">
+            <a href="#" style="color: var(--text-main); text-decoration: none;">동양미래대학교 로봇소프트웨어과</a>
+            <a href="#" style="color: var(--text-main); text-decoration: none;">산업기사 자격 (준비 중)</a>
+            <a href="#" style="color: var(--text-main); text-decoration: none;">OPIc IH (목표)</a>
         </div>
-        <p style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px;">&copy; 2026 APPLIED MATERIALS KOREA 지원 포트폴리오 | AMK READY</p>
+
+        <p style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px; margin-top: 4rem; text-align: center;">
+            &copy; 2026 APPLIED MATERIALS KOREA 지원 포트폴리오 | AMK READY
+        </p>
     </footer>
 
     <script src="script.js"></script>

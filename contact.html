@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | LHS Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .form-group { margin-bottom: 2rem; }
+        .form-group label { display: block; margin-bottom: 0.8rem; color: var(--text-main); font-weight: 700; font-size: 0.9rem; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            background: rgba(218, 41, 28, 0.05);
+        }
+        .file-upload-wrapper {
+            position: relative;
+            border: 2px dashed var(--border-color);
+            padding: 2.5rem;
+            text-align: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .file-upload-wrapper:hover { border-color: var(--primary-red); background: rgba(218, 41, 28, 0.03); }
+        .file-upload-wrapper input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AMK <span style="color: var(--primary-red);">/ CE</span></div>
+        <div class="nav-links">
+            <a href="index.html">홈</a>
+            <a href="tech_stack.html">기술 역량</a>
+            <a href="project_artifacts.html">프로젝트</a>
+            <a href="growth_log.html">성장 로그</a>
+            <a href="community.html">커뮤니티</a>
+            <a href="contact.html" class="active">연락처</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="hero-bg-wrapper">
+                <div class="hero-bg-image" style="--hero-bg: url('assets/images/hero.png');"></div>
+            </div>
+            <div class="container animate-in">
+                <h2 style="font-size: 4rem; letter-spacing: -2px; font-weight: 900;">GET IN <span class="highlight">TOUCH</span></h2>
+            </div>
+        </section>
+
+        <div class="container" style="padding: 6rem 0;">
+            <div class="animate-in" style="text-align: center; margin-bottom: 5rem;">
+                <p style="color: var(--text-muted); font-size: 1.1rem;">새로운 기회와 기술적 교류는 언제나 환영합니다.</p>
+            </div>
+
+        <div class="contact-form animate-in">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>성함 (Name)</label>
+                    <input type="text" id="name" placeholder="이름을 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label>이메일 주소 (Email)</label>
+                    <input type="email" id="email" placeholder="example@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label>문의 내용 (Inquiry)</label>
+                    <textarea id="message" rows="6" placeholder="문의하실 내용을 상세히 적어주세요" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>파일 업로드 (Attachments)</label>
+                    <div class="file-upload-wrapper">
+                        <p id="fileName" style="color: var(--text-muted);">클릭하거나 파일을 드래그하여 업로드하세요</p>
+                        <input type="file" id="fileInput" onchange="handleFile(this)">
+                    </div>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%; margin-top: 2rem;">문의하기 전송</button>
+            </form>
+        </div>
+
+        <div style="margin-top: 8rem; text-align: center;">
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">직접 연락: <span style="color: white; font-weight: bold;">your-email@applied.com</span></p>
+            <a href="index.html" class="cta-button" style="background: transparent; border: 1px solid var(--border-color);">홈으로 돌아가기</a>
+        </div>
+    </main>
+
+    <footer>
+        <div style="margin-bottom: 4rem; display: flex; justify-content: center; gap: 4rem; font-weight: bold; font-size: 1rem;">
+            <a href="#" style="color: var(--text-main); text-decoration: none;">동양미래대학교 로봇소프트웨어과</a>
+            <a href="#" style="color: var(--text-main); text-decoration: none;">산업기사 자격 (준비 중)</a>
+            <a href="#" style="color: var(--text-main); text-decoration: none;">OPIc IH (목표)</a>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px; margin-top: 4rem; text-align: center;">
+            &copy; 2026 APPLIED MATERIALS KOREA 지원 포트폴리오 | AMK READY
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleFile(input) {
+            const fileName = input.files[0] ? input.files[0].name : "클릭하거나 파일을 드래그하여 업로드하세요";
+            document.getElementById('fileName').innerText = fileName;
+            document.getElementById('fileName').style.color = input.files[0] ? "var(--primary-red)" : "var(--text-muted)";
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('문의가 성공적으로 전송되었습니다! (시뮬레이션)');
+            e.target.reset();
+            document.getElementById('fileName').innerText = "클릭하거나 파일을 드래그하여 업로드하세요";
+            document.getElementById('fileName').style.color = "var(--text-muted)";
+        });
+    </script>
+</body>
+</html>
