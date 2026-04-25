@@ -2,12 +2,43 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1280">
     <title>LHS Portfolio | Command Center</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+        if (sessionStorage.getItem('hasSeenIntro')) {
+            document.write('<style>#opening-sequence { display: none !important; }</style>');
+        }
+    </script>
 </head>
 <body>
 
+    <!-- Robot Arm Opening Sequence -->
+    <div id="opening-sequence" class="robot-arm-opening">
+        <div class="split-door door-left"></div>
+        <div class="split-door door-right"></div>
+        <div class="arm-container">
+            <svg width="200" height="350" viewBox="0 0 200 350" class="robot-arm-svg">
+                <!-- Upper Arm -->
+                <rect x="80" y="0" width="40" height="200" fill="#151515" stroke="var(--primary-red)" stroke-width="2"/>
+                <line x1="100" y1="0" x2="100" y2="200" stroke="#333" stroke-width="10"/>
+                <!-- Joint -->
+                <circle cx="100" cy="200" r="30" fill="#0a0a0a" stroke="var(--primary-red)" stroke-width="3"/>
+                <circle cx="100" cy="200" r="10" fill="var(--primary-red)" class="pulse-light"/>
+                <!-- Base / Wrist -->
+                <path d="M 60 210 L 140 210 L 130 260 L 70 260 Z" fill="#151515" stroke="var(--primary-red)" stroke-width="2"/>
+                <!-- Left Finger -->
+                <g class="finger-left">
+                    <path d="M 70 260 L 30 330 L 50 340 L 85 260 Z" fill="#222" stroke="var(--primary-red)" stroke-width="2"/>
+                </g>
+                <!-- Right Finger -->
+                <g class="finger-right">
+                    <path d="M 130 260 L 170 330 L 150 340 L 115 260 Z" fill="#222" stroke="var(--primary-red)" stroke-width="2"/>
+                </g>
+            </svg>
+        </div>
+        <div class="system-msg">ROBOTIC INTERFACE ENGAGED...</div>
+    </div>
     <nav>
         <div class="logo">AMK <span style="color: var(--primary-red);">/ CE</span></div>
         <div class="nav-links">

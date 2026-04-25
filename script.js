@@ -87,6 +87,29 @@ function initNetworkCanvas() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const openingSequence = document.getElementById('opening-sequence');
+    if (openingSequence) {
+        // 세션 중에 이미 오프닝을 봤는지 확인
+        if (sessionStorage.getItem('hasSeenIntro')) {
+            openingSequence.remove();
+            document.body.style.overflow = '';
+        } else {
+            document.body.style.overflow = 'hidden';
+            window.scrollTo(0, 0);
+            
+            setTimeout(() => {
+                openingSequence.classList.add('opened');
+            }, 1500);
+
+            setTimeout(() => {
+                document.body.style.overflow = '';
+                openingSequence.remove();
+                // 오프닝을 봤음을 세션에 저장
+                sessionStorage.setItem('hasSeenIntro', 'true');
+            }, 3500);
+        }
+    }
+
     const observerOptions = {
         threshold: 0.1
     };
