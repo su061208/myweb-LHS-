@@ -155,6 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span style="font-family: 'JetBrains Mono'; font-size: 1.1rem; margin-bottom: 2px;">03</span>
                 게시판
             </a>
+            <a href="links.html" class="floating-item">
+                <span style="font-family: 'JetBrains Mono'; font-size: 1.1rem; margin-bottom: 2px;">04</span>
+                링크
+            </a>
             <a href="#" class="floating-item top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
                 TOP
             </a>

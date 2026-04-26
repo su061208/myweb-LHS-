@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <title>Links | LHS Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .link-card {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .link-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-red);
+            box-shadow: 0 10px 30px rgba(255, 77, 77, 0.1);
+        }
+        .link-icon {
+            margin-bottom: 1.5rem;
+            color: var(--primary-red);
+            filter: drop-shadow(0 0 8px var(--primary-red));
+        }
+        .link-icon svg {
+            width: 48px;
+            height: 48px;
+            stroke-width: 1.5px;
+            transition: all 0.3s ease;
+        }
+        .link-card:hover .link-icon {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 15px var(--primary-red));
+        }
+        .link-category {
+            font-size: 0.75rem;
+            color: var(--primary-red);
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .link-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .link-description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .connection-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--primary-red);
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--primary-red);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AMK <span style="color: var(--primary-red);">/ PORTFOLIO</span></div>
+        <div class="nav-links">
+            <a href="index.html">홈</a>
+            <a href="tech_stack.html">기술 역량</a>
+            <a href="project_artifacts.html">프로젝트</a>
+            <a href="growth_log.html">성장 로그</a>
+            <a href="community.html">커뮤니티</a>
+            <a href="contact.html">연락처</a>
+            <a href="links.html" class="active">링크</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="hero-bg-wrapper">
+                <div class="hero-bg-image" style="--hero-bg: url('assets/images/hero.png');"></div>
+            </div>
+            <div class="container animate-in">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                    <div style="width: 40px; height: 2px; background: var(--primary-red);"></div>
+                    <h2 style="font-size: 4rem; letter-spacing: -2px; font-weight: 900;">EXTERNAL <span class="highlight">LINKS</span></h2>
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px;">
+                    로봇 소프트웨어 엔지니어링 역량 강화 및 기술 공유를 위한 외부 채널과 커뮤니티 연결망입니다.
+                </p>
+            </div>
+        </section>
+
+        <div class="container" style="padding-bottom: 10rem;">
+            <div class="link-grid animate-in">
+                <!-- YouTube Link -->
+                <a href="https://www.youtube.com/@auto2con" target="_blank" class="glass-card link-card">
+                    <div>
+                        <div class="link-icon">
+                            <i data-lucide="youtube"></i>
+                        </div>
+                        <div class="link-category">Content Channel</div>
+                        <h3 class="link-title">Auto2con YouTube</h3>
+                        <p class="link-description">
+                            자동화 및 제어 기술 컨텐츠를 제공하는 유튜브 채널입니다. 최신 로봇 공학 트렌드와 기술적 통찰을 공유합니다.
+                        </p>
+                    </div>
+                    <div class="connection-status">
+                        <div class="status-dot"></div>
+                        <span>LINK_ACTIVE: youtube.com/@auto2con</span>
+                    </div>
+                </a>
+
+                <!-- Dongyang Bootcamp Link -->
+                <a href="https://bootcamp.dongyang.ac.kr" target="_blank" class="glass-card link-card">
+                    <div>
+                        <div class="link-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="link-category">Academic Platform</div>
+                        <h3 class="link-title">Dongyang Bootcamp</h3>
+                        <p class="link-description">
+                            동양미래대학교 부트캠프 플랫폼입니다. 실무 중심의 기술 교육과 프로젝트 수행을 위한 핵심 거점입니다.
+                        </p>
+                    </div>
+                    <div class="connection-status">
+                        <div class="status-dot"></div>
+                        <span>LINK_ACTIVE: bootcamp.dongyang.ac.kr</span>
+                    </div>
+                </a>
+
+                <!-- Naver Cafe Link -->
+                <a href="https://cafe.naver.com/dyrobot" target="_blank" class="glass-card link-card">
+                    <div>
+                        <div class="link-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="link-category">Engineering Community</div>
+                        <h3 class="link-title">DY Robot Cafe</h3>
+                        <p class="link-description">
+                            로봇 소프트웨어 전공자들을 위한 네이버 카페 커뮤니티입니다. 기술 자료 공유 및 네트워크 형성을 위한 공간입니다.
+                        </p>
+                    </div>
+                    <div class="connection-status">
+                        <div class="status-dot"></div>
+                        <span>LINK_ACTIVE: cafe.naver.com/dyrobot</span>
+                    </div>
+                </a>
+            </div>
+
+            <div style="margin-top: 8rem; text-align: center;" class="animate-in">
+                <div class="tech-log" style="display: inline-block; padding: 2rem; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2);">
+                    SYSTEM_LINK_STATUS: SYNCHRONIZED<br>
+                    ALL_EXTERNAL_NODES: ONLINE<br>
+                    >> READY_TO_NAVIGATE
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div style="margin-bottom: 4rem; display: flex; justify-content: center; gap: 4rem; font-weight: bold; font-size: 1rem;">
+            <a href="#" style="color: var(--text-main); text-decoration: none;">동양미래대학교 로봇소프트웨어과</a>
+            <a href="#" style="color: var(--text-main); text-decoration: none;">산업기사 자격 (준비 중)</a>
+            <a href="#" style="color: var(--text-main); text-decoration: none;">OPIc IH (목표)</a>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px; margin-top: 4rem; text-align: center;">
+            &copy; 2026 APPLIED MATERIALS KOREA 지원 포트폴리오 | AMK READY
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
