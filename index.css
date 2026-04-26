@@ -776,3 +776,44 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* --- Global Robot Background & Schematic Arm --- */
+.robot-bg-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('assets/images/robot_bg.png') center/cover no-repeat;
+    opacity: 0.35; /* More visible */
+    z-index: -2;
+    filter: grayscale(60%) brightness(0.6) contrast(1.2); /* Sharper */
+    pointer-events: none;
+}
+
+.schematic-arm {
+    position: fixed;
+    right: -100px;
+    bottom: -50px;
+    width: 800px;
+    height: 800px;
+    opacity: 0.25; /* More visible */
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(-10deg);
+    transition: all 1.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+body:hover .schematic-arm {
+    opacity: 0.45;
+    transform: rotate(0deg) scale(1.05);
+}
+
+.schematic-arm path, .schematic-arm circle, .schematic-arm rect {
+    stroke: var(--primary-red);
+    stroke-width: 2; /* Thicker strokes for clarity */
+}
+
+.schematic-arm text {
+    fill: var(--primary-red);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: bold;
+}

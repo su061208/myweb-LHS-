@@ -135,6 +135,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initNetworkCanvas();
 
+    // Global Robot Background & Schematic Injection
+    const injectGlobalBackground = () => {
+        if (!document.querySelector('.robot-bg-overlay')) {
+            const bgOverlay = document.createElement('div');
+            bgOverlay.className = 'robot-bg-overlay';
+            document.body.prepend(bgOverlay);
+
+            const schematicSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            schematicSvg.setAttribute('class', 'schematic-arm');
+            schematicSvg.setAttribute('viewBox', '0 0 800 800');
+            schematicSvg.setAttribute('fill', 'none');
+            schematicSvg.innerHTML = `
+                <path d="M100 700 L300 650 L450 400 L600 350 L750 150" stroke-dasharray="10 5" />
+                <circle cx="100" cy="700" r="40" />
+                <circle cx="300" cy="650" r="30" />
+                <circle cx="450" cy="400" r="25" />
+                <rect x="580" y="330" width="40" height="40" transform="rotate(45 600 350)" />
+                <g class="gripper">
+                    <path d="M750 150 L780 120 M750 150 L720 180" stroke-width="3" />
+                    <path d="M780 120 L800 140 M720 180 L700 160" />
+                </g>
+                <text x="320" y="640">JOINT_B_ROTATION: 45.2deg</text>
+                <text x="470" y="390">AXIS_C_STABILITY: NOMINAL</text>
+                <line x1="0" y1="0" x2="800" y2="800" stroke="rgba(0, 229, 255, 0.05)" stroke-width="0.5" />
+                <line x1="800" y1="0" x2="0" y2="800" stroke="rgba(0, 229, 255, 0.05)" stroke-width="0.5" />
+            `;
+            document.body.prepend(schematicSvg);
+        }
+    };
+    injectGlobalBackground();
+
     // Global Floating Quick Menu Injection
     if (!document.querySelector('.floating-menu')) {
         const floatingMenu = document.createElement('div');
