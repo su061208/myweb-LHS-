@@ -9,7 +9,7 @@
 <body>
 
     <nav>
-        <div class="logo">AMK <span style="color: var(--primary-red);">/ CE</span></div>
+        <div class="logo">AMK <span style="color: var(--primary-red);">/ PORTFOLIO</span></div>
         <div class="nav-links">
             <a href="index.html">홈</a>
             <a href="tech_stack.html" class="active">기술 역량</a>
@@ -23,7 +23,7 @@
     <main>
         <section class="page-hero">
             <div class="hero-bg-wrapper">
-                <div class="hero-bg-image" style="--hero-bg: url('assets/images/stack.png');"></div>
+                <div class="hero-bg-image" style="--hero-bg: url('assets/images/bg.png');"></div>
             </div>
             <div class="container animate-in">
                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
@@ -34,97 +34,290 @@
         </section>
 
         <div class="container" style="padding: 6rem 0;">
-            <div class="animate-in" style="margin-bottom: 5rem;">
-            
-            <div class="split-layout">
-                <p style="color: var(--text-main); font-size: 1.3rem; line-height: 1.8; opacity: 0.9;">
-                    단순히 툴을 사용하는 법을 넘어, <span class="highlight" style="font-weight: 800;">'왜 이 로직이 장비를 최적화하는가'</span>에 집중합니다.<br>
-                    전공 지식을 데이터로 치환하여 AMK 설비의 <span style="border-bottom: 2px solid var(--primary-red);">Uptime 100%</span>를 지향하는 엔지니어링 스택입니다.
-                </p>
-                <div style="border: 1px solid var(--border-color); padding: 1.5rem; background: rgba(218, 41, 28, 0.05);">
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--primary-red);">
-                        >> CORE_PHILOSOPHY: LOGIC_OF_INTENT<br>
-                        >> KEY_VALUE: PREVENTIVE_MAINTENANCE<br>
-                        >> STATUS: ALL_SYSTEMS_OPTIMIZED
+            <!-- Unified Academic Roadmap & Deep-Dive -->
+            <div class="animate-in" style="margin-bottom: 8rem;">
+                <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 5rem;">
+                    <h2 style="font-size: 2.8rem; font-weight: 950; letter-spacing: -1px;">ACADEMIC <span class="highlight">ROADMAP</span></h2>
+                    <div style="flex: 1; height: 1px; background: linear-gradient(to right, var(--border-color), transparent);"></div>
+                </div>
+
+                <!-- Semester Tabs -->
+                <div class="semester-tabs" style="display: flex; gap: 1rem; margin-bottom: 4rem;">
+                    <button class="tab-btn active" onclick="showSemester('sem1-1')">1ST YEAR / 1ST SEM</button>
+                    <button class="tab-btn" onclick="showSemester('sem1-2')">1ST YEAR / 2ND SEM</button>
+                    <button class="tab-btn" onclick="showSemester('sem2-1')">2ND YEAR / 1ST SEM</button>
+                </div>
+
+                <!-- Semester Content -->
+                <div id="sem1-1" class="semester-content active">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2rem;">
+                        <!-- 3차원 CAD -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">3차원 CAD</h4>
+                                <span class="subject-category-tag">FOUNDATION</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                200x200x200mm 규격 내 로봇 부품 설계 성과. 기구부 간섭 체크를 통해 <span style="color: #fff; font-weight: 700;">설계 오차 0mm</span> 최적화 달성.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: SOLIDWORKS_V1.0_VERIFIED
+                            </div>
+                        </div>
+                        <!-- 디지털논리회로 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">디지털논리회로</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                불 대수 기반 논리식 최적화 및 F/F 활용 순차 논리 회로 설계. <span style="color: #fff; font-weight: 700;">논리 게이트 시간 지연 분석</span> 결과 보유.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: LOGIC_DESIGN_CALIBRATED
+                            </div>
+                        </div>
+                        <!-- 로봇기초실습 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">로봇기초실습</h4>
+                                <span class="subject-category-tag">FOUNDATION</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                EV3 센서 융합 제어. 로봇 거동을 <span style="color: #fff; font-weight: 700;">변위, 속도, 가속도의 벡터량</span>으로 해석. P-제어 알고리즘 적용.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: VECTOR_DYNAMICS_ACTIVE
+                            </div>
+                        </div>
+                        <!-- 전기회로 및 실습 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">전기회로 및 실습</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                휘스톤 브리지 해석법을 통한 <span style="color: #fff; font-weight: 700;">미지 저항(Rx=6kΩ) 산출</span>. 메쉬/노드 해석 수식 기반 정밀 분석.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: CIRCUIT_ANALYSIS_SYNCED
+                            </div>
+                        </div>
+                        <!-- 엔지니어링 기초 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">엔지니어링 기초</h4>
+                                <span class="subject-category-tag">FOUNDATION</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                자동화 시스템 <span style="color: #fff; font-weight: 700;">5대 요소(S/P/A/S/N)</span> 계통적 이해. 설비 유지 보수의 이론적 체계 강조.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: SYS_STRUCTURE_READY
+                            </div>
+                        </div>
+                        <!-- 컴퓨터와 챗GPT 활용 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">컴퓨터와 챗GPT 활용</h4>
+                                <span class="subject-category-tag">FOUNDATION</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                구글 시트 데이터 관리 및 <span style="color: #fff; font-weight: 700;">프롬프트 엔지니어링</span> 기반 기술 문서 DX 분석 역량.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: AI_DX_OPTIMIZED
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; align-items: stretch;">
-            <!-- 1. Circuit Analysis -->
-            <div class="glass-card animate-in">
-                <div>
-                    <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">CIRCUIT ANALYSIS</div>
-                    <h3 style="margin-bottom: 1rem;">전기회로 분석 및 계측</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        오실로스코프를 활용한 R/L/C 회로 실습 및 계측 역량을 보유하고 있습니다. 전압 및 전류의 과도 특성을 정밀하게 분석하여 설비의 전기적 무결성을 진단합니다.
-                    </p>
-                </div>
-                <div>
-                    <div class="tech-log">> INSTRUMENT: OSCILLOSCOPE<br>> MEASUREMENT: VERIFIED</div>
-                    <div class="status-indicator">STATUS: CALIBRATED</div>
-                </div>
-            </div>
 
-            <!-- 2. Digital Logic -->
-            <div class="glass-card animate-in" style="transition-delay: 0.1s;">
-                <div>
-                    <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">DIGITAL LOGIC</div>
-                    <h3 style="margin-bottom: 1rem;">디지털 논리 회로 설계</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        플립플롭(Flip-Flop) 기반의 순차회로 설계 및 상태 축소(State Reduction) 기술을 적용하여 불필요한 게이트 연산을 제거하고 시스템 반응 속도를 최적화합니다.
-                    </p>
+                <div id="sem1-2" class="semester-content">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2rem;">
+                        <!-- 전자회로 및 실습 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">전자회로 및 실습</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                오실로스코프 파형 분석을 통한 <span style="color: #fff; font-weight: 700;">회로 디버깅 및 컴포넌트 단위 결함 추론</span>.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: WAVEFORM_ANALYSIS_DONE
+                            </div>
+                        </div>
+                        <!-- CAD 기초 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">CAD 기초</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                AutoCAD 활용 <span style="color: #fff; font-weight: 700;">2D 정밀 도면 작성</span> 및 해석. AMK 장비 매뉴얼 도면 수정 가능 실무 역량.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: AUTOCAD_2D_READY
+                            </div>
+                        </div>
+                        <!-- 창의적공학설계 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">창의적공학설계</h4>
+                                <span class="subject-category-tag">SPECIAL</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                '볼링매니아' 로봇 개선. <span style="color: var(--primary-red); font-weight: 700;">강성 40% 향상</span> 달성 및 주행 정지 원인 분석을 통한 제어 무결성 학습.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: ANALYSIS_&_GROWTH_COMPLETE
+                            </div>
+                        </div>
+                        <!-- 파이썬 프로그래밍 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">파이썬 프로그래밍</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                외부 모듈 활용 <span style="color: #fff; font-weight: 700;">데이터 처리 자동화</span> 및 제어 로직 구현. 논리적 코딩 프로세스 구축.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: PYTHON_AUTOMATION_ACTIVE
+                            </div>
+                        </div>
+                        <!-- 아두이노 프로그래밍 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">아두이노 프로그래밍</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                millis() 기반 <span style="color: #fff; font-weight: 700;">비차단(Non-blocking) 제어</span> 로직 설계. 지연 요소 사전 차단 엔지니어링.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: NON_BLOCKING_CTRL_READY
+                            </div>
+                        </div>
+                        <!-- 로봇공학기초 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">로봇공학기초</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                산업용 로봇 기구학적 동작 특성 분석. <span style="color: #fff; font-weight: 700;">하드웨어 분해/조립</span> 실무를 통한 구조 이해.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: ROBOT_KINEMATICS_SYNCED
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="tech-log">> GATES: REDUCED<br>> CLOCK_SYNC: STABLE</div>
-                    <div class="status-indicator">STATUS: CALIBRATED</div>
-                </div>
-            </div>
 
-            <!-- 3. PLC Control -->
-            <div class="glass-card animate-in" style="transition-delay: 0.2s;">
-                <div>
-                    <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">PLC CONTROL</div>
-                    <h3 style="margin-bottom: 1.5rem;">PLC 시퀀스 제어</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        래더 다이어그램(LD)을 활용하여 PTP 산업용 로봇의 동작 시퀀스를 정밀하게 제어합니다. 장비 정지 시간을 최소화하는 인터록 로직 설계에 강점이 있습니다.
-                    </p>
+                <div id="sem2-1" class="semester-content">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2rem;">
+                        <!-- 윈도우 프로그래밍 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">윈도우 프로그래밍</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                C# WinForms 기반 <span style="color: #fff; font-weight: 700;">실시간 모니터링 및 제어 UI</span> 구축 역량. 이벤트 기반 최적 프로그래밍.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: C#_MONITORING_UI_ACTIVE
+                            </div>
+                        </div>
+                        <!-- 웹프로그래밍 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">웹프로그래밍</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                HTML/CSS/JS 기반 <span style="color: #fff; font-weight: 700;">공정 데이터 시각화 대시보드</span> 제작. 반응형 설계 적용.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: WEB_DASHBOARD_OPTIMIZED
+                            </div>
+                        </div>
+                        <!-- PLC 프로그래밍 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">PLC 프로그래밍</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                GX WORKS3 활용 <span style="color: #fff; font-weight: 700;">산업용 래더 작성 및 PTP 로봇 제어</span> 시퀀스 구현 실무 역량.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: PLC_LADDER_VERIFIED
+                            </div>
+                        </div>
+                        <!-- 마이크로컨트롤러 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">마이크로컨트롤러</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                FSM 기반 상태 제어 구조 설계. <span style="color: #fff; font-weight: 700;">예외 상황 0.1초 내 대응</span> 가능한 무결점 로직 구축.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: MCU_FSM_STABLE
+                            </div>
+                        </div>
+                        <!-- 인공지능개론 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">인공지능개론</h4>
+                                <span class="subject-category-tag">PRACTICE</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                파이썬 기반 <span style="color: #fff; font-weight: 700;">예방 보전(Predictive Maintenance)</span> 기초 모델 구현 및 데이터 기반 이상 감지.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: AI_PREVENTIVE_READY
+                            </div>
+                        </div>
+                        <!-- 전공 영어 -->
+                        <div class="glass-card">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <h4 style="color: #fff; font-size: 1.2rem;">전공 영어</h4>
+                                <span class="subject-category-tag">SPECIALIZATION</span>
+                            </div>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem;">
+                                <span style="color: #fff; font-weight: 700;">AMK 글로벌 기술 매뉴얼</span> 정독 능력. OPIc AL/IH 목표 달성을 위한 커뮤니케이션 역량.
+                            </p>
+                            <div class="tech-log" style="margin-top: 0; padding-top: 1rem; color: var(--primary-red); border-top: 1px solid rgba(255,255,255,0.05);">
+                                >> STATUS: ENGLISH_PROFICIENCY_HIGH
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="tech-log">> LADDER_SCAN: 0.5ms<br>> SEQUENCER: OPTIMIZED</div>
-                    <div class="status-indicator">STATUS: CALIBRATED</div>
-                </div>
-            </div>
 
-            <!-- 4. Robot Practice -->
-            <div class="glass-card animate-in" style="transition-delay: 0.3s;">
-                <div>
-                    <div style="font-size: 0.8rem; color: var(--primary-red); font-weight: bold; margin-bottom: 1rem;">ROBOT PRACTICE</div>
-                    <h3 style="margin-bottom: 1.5rem;">실시간 데이터 로깅 실습</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">
-                        EV3를 활용하여 센서 및 구동기 데이터를 실시간으로 로깅(Data Logging)하고 분석했습니다. 수집된 수치 데이터를 기반으로 시스템의 오류 패턴을 식별합니다.
-                    </p>
-                </div>
-                <div>
-                    <div class="tech-log">> DATA_LOG: ACTIVE<br>> ANALYSIS_REPORT: DONE</div>
-                    <div class="status-indicator">STATUS: CALIBRATED</div>
+                <!-- Footer style notice inside main for roadmap context -->
+                <div style="margin-top: 6rem; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted); opacity: 0.6;">
+                    * 각 과목은 AMK 설비의 압도적 가동률(Uptime) 확보를 위한 이론적/실습적 토대입니다.
                 </div>
             </div>
         </div>
 
         <footer>
-        <div style="margin-bottom: 4rem; display: flex; justify-content: center; gap: 4rem; font-weight: bold; font-size: 1rem;">
-            <a href="#" style="color: var(--text-main); text-decoration: none;">동양미래대학교 로봇소프트웨어과</a>
-            <a href="#" style="color: var(--text-main); text-decoration: none;">산업기사 자격 (준비 중)</a>
-            <a href="#" style="color: var(--text-main); text-decoration: none;">OPIc IH (목표)</a>
-        </div>
+            <div style="margin-bottom: 4rem; display: flex; justify-content: center; gap: 4rem; font-weight: bold; font-size: 1rem;">
+                <a href="#" style="color: var(--text-main); text-decoration: none;">동양미래대학교 로봇소프트웨어과</a>
+                <a href="#" style="color: var(--text-main); text-decoration: none;">산업기사 자격 (준비 중)</a>
+                <a href="#" style="color: var(--text-main); text-decoration: none;">OPIc IH (목표)</a>
+            </div>
 
-        <p style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px; margin-top: 4rem; text-align: center;">
-            &copy; 2026 APPLIED MATERIALS KOREA 지원 포트폴리오 | AMK READY
-        </p>
-    </footer>
+            <p style="font-size: 0.85rem; color: var(--text-muted); letter-spacing: 1px; margin-top: 4rem; text-align: center;">
+                &copy; 2026 APPLIED MATERIALS KOREA 지원 포트폴리오 | AMK READY
+            </p>
+        </footer>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
+

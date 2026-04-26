@@ -162,3 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(floatingMenu);
     }
 });
+
+// Semester Tab Switching
+function showSemester(semesterId) {
+    // Hide all semester contents
+    const contents = document.querySelectorAll('.semester-content');
+    contents.forEach(content => {
+        content.classList.remove('active');
+    });
+
+    // Remove active class from all tab buttons
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Show selected content and activate button
+    document.getElementById(semesterId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+

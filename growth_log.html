@@ -47,7 +47,7 @@
 <body>
 
     <nav>
-        <div class="logo">AMK <span style="color: var(--primary-red);">/ CE</span></div>
+        <div class="logo">AMK <span style="color: var(--primary-red);">/ PORTFOLIO</span></div>
         <div class="nav-links">
             <a href="index.html">홈</a>
             <a href="tech_stack.html">기술 역량</a>
@@ -69,66 +69,129 @@
         </section>
 
         <div class="container" style="padding: 6rem 0;">
-            <div class="animate-in">
-                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem;">제공된 소스 자료에 기반한 LHS 엔지니어의 정직한 성장 기록입니다.</p>
+            <!-- Strategic Evolution Log Title -->
+            <div class="animate-in" style="margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                    <h2 style="font-size: 2.8rem; font-weight: 950; letter-spacing: -1px;">STRATEGIC <span class="highlight">GROWTH</span> LOG</h2>
+                    <div style="flex: 1; height: 1px; background: linear-gradient(to right, var(--border-color), transparent);"></div>
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 800px;">
+                    LHS 엔지니어의 기술적 진화 과정입니다. <span style="color: var(--primary-red); font-weight: bold;">AMK 설비 가동률 극대화</span>를 향한 수직 성장 곡선을 추적합니다.
+                </p>
             </div>
 
-        <!-- 터미널 섹션 -->
-        <div class="terminal-window animate-in">
-            <div class="terminal-line"><span class="timestamp">[2024.02]</span> <span class="command">system --status</span> -> 누원고등학교 졸업 완료</div>
-            <div class="terminal-line"><span class="timestamp">[2024.03]</span> <span class="command">system --init</span> -> 동양미래대학교 로봇소프트웨어과 입학</div>
-            <div class="terminal-line"><span class="timestamp">[2025.03]</span> <span class="command">system --running</span> -> 2학년 재학 및 Vibe Coding 역량 강화 중</div>
-            <div class="terminal-line"><span class="timestamp">[2026.01]</span> <span class="command">mission --planned</span> -> (계획) 반도체 부트캠프 몰입형 교육(PLC 실무) 이수 예정</div>
-            <div class="terminal-line" style="margin-top: 1.5rem; color: var(--primary-red); font-weight: bold;">
-                <span class="timestamp">[FINAL]</span> >> Ready to Join AMK as a Maintenance Engineer
+            <!-- 터미널 섹션 (Sleek Update) -->
+            <div class="terminal-window animate-in" style="margin-bottom: 6rem;">
+                <div class="terminal-line"><span class="timestamp">[2025.02]</span> <span class="command">system --status</span> -> 누원고등학교 졸업 완료</div>
+                <div class="terminal-line"><span class="timestamp">[2025.03]</span> <span class="command">system --init</span> -> 동양미래대학교 입학</div>
+                <div class="terminal-line"><span class="timestamp">[2027.01]</span> <span class="command">mission --planned</span> -> (계획) 반도체 부트캠프 PLC 실무 이수 예정</div>
+                <div class="terminal-line" style="margin-top: 1.5rem; color: var(--primary-red); font-weight: 800; border-top: 1px solid rgba(0, 229, 255, 0.1); padding-top: 1.5rem;">
+                    >> DEPLOYMENT_TARGET: APPLIED MATERIALS KOREA (CE)
+                </div>
+            </div>
+
+            <!-- Technical Exponential Graph UI -->
+            <div class="chart-container" style="position: relative; height: 750px; width: 100%; margin-top: 5rem; padding: 2rem;">
+                
+                <!-- Grid System (Background) -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                            background-image: 
+                                linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+                            background-size: 50px 50px;
+                            z-index: 0; pointer-events: none;"></div>
+
+                <!-- Y-Axis (Vertical) -->
+                <div style="position: absolute; left: 50px; top: 0; bottom: 50px; width: 2px; background: var(--primary-red); z-index: 1;">
+                    <!-- Arrowhead -->
+                    <div style="position: absolute; top: -10px; left: -5px; width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 12px solid var(--primary-red);"></div>
+                    <!-- Label -->
+                    <div style="position: absolute; top: -40px; left: -20px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary-red); font-weight: 800; white-space: nowrap;">[Y] GROWTH_LEVEL (E^x)</div>
+                    <!-- Ticks -->
+                    <div style="position: absolute; top: 25%; left: -5px; width: 10px; height: 1px; background: var(--primary-red);"></div>
+                    <div style="position: absolute; top: 50%; left: -5px; width: 10px; height: 1px; background: var(--primary-red);"></div>
+                    <div style="position: absolute; top: 75%; left: -5px; width: 10px; height: 1px; background: var(--primary-red);"></div>
+                </div>
+
+                <!-- X-Axis (Horizontal) -->
+                <div style="position: absolute; left: 50px; right: 0; bottom: 50px; height: 2px; background: var(--primary-red); z-index: 1;">
+                    <!-- Arrowhead -->
+                    <div style="position: absolute; right: -10px; top: -5px; width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 12px solid var(--primary-red);"></div>
+                    <!-- Label -->
+                    <div style="position: absolute; bottom: -40px; right: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary-red); font-weight: 800; white-space: nowrap;">[X] TIMELINE_PROGRESS</div>
+                    <!-- Ticks -->
+                    <div style="position: absolute; left: 25%; bottom: -5px; width: 1px; height: 10px; background: var(--primary-red);"></div>
+                    <div style="position: absolute; left: 50%; bottom: -5px; width: 1px; height: 10px; background: var(--primary-red);"></div>
+                    <div style="position: absolute; left: 75%; bottom: -5px; width: 1px; height: 10px; background: var(--primary-red);"></div>
+                </div>
+
+                <!-- Growth Curve SVG -->
+                <svg class="growth-line-svg" style="position: absolute; left: 50px; top: 0; width: calc(100% - 50px); height: calc(100% - 50px); z-index: 2;" preserveAspectRatio="none" viewBox="0 0 100 100">
+                    <path d="M0,100 Q40,100 100,0" fill="none" stroke="var(--primary-red)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300">
+                        <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3s" fill="freeze" />
+                    </path>
+                </svg>
+
+                <!-- Points & Cards (Responsive Slope Layout) -->
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; height: 100%; width: 100%; padding: 0 5%; position: relative; z-index: 4;">
+                    
+                    <!-- Milestone 01 -->
+                    <div class="glass-card animate-in" style="width: 30%; margin-bottom: 2rem; padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span style="color: var(--primary-red); font-weight: 900; font-family: 'JetBrains Mono'; font-size: 0.8rem;">2025</span>
+                            <span class="subject-category-tag" style="font-size: 0.6rem;">FOUNDATION</span>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #fff;">엔지니어링 기초 확립</h4>
+                        <ul style="font-size: 0.8rem; color: var(--text-muted); padding-left: 1rem; list-style-type: square;">
+                            <li style="margin-bottom: 0.4rem;">SolidWorks 설계 오차 0mm</li>
+                            <li style="margin-bottom: 0.4rem;">휘스톤 브리지 미지 저항 산출</li>
+                            <li>불 대수 기반 순차 회로 설계</li>
+                        </ul>
+                        <div style="margin-top: 1rem; font-family: 'JetBrains Mono'; font-size: 0.6rem; color: var(--primary-red); opacity: 0.7;">
+                            >> CAD_PRECISION, CIRCUIT_LOGIC
+                        </div>
+                    </div>
+
+                    <!-- Milestone 02 -->
+                    <div class="glass-card animate-in" style="width: 30%; margin-bottom: 18rem; padding: 1.5rem; animation-delay: 1s;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span style="color: var(--primary-red); font-weight: 900; font-family: 'JetBrains Mono'; font-size: 0.8rem;">2026</span>
+                            <span class="subject-category-tag" style="font-size: 0.6rem;">SPECIALIZATION</span>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #fff;">전공 심화 및 실무 응용</h4>
+                        <ul style="font-size: 0.8rem; color: var(--text-muted); padding-left: 1rem; list-style-type: square;">
+                            <li style="margin-bottom: 0.4rem;">PLC 및 PTP 로봇 제어 구현</li>
+                            <li style="margin-bottom: 0.4rem;">MCU 0.1초 내 예외 대응 설계</li>
+                            <li>AI 기반 예방 보전 기초 구현</li>
+                        </ul>
+                        <div style="margin-top: 1rem; font-family: 'JetBrains Mono'; font-size: 0.6rem; color: var(--primary-red); opacity: 0.7;">
+                            >> PLC_CONTROL, FSM_LOGIC
+                        </div>
+                    </div>
+
+                    <!-- Milestone 03 -->
+                    <div class="glass-card animate-in" style="width: 30%; margin-bottom: 35rem; padding: 1.5rem; border-color: var(--primary-red); animation-delay: 2s; background: rgba(0, 229, 255, 0.05);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span style="color: var(--primary-red); font-weight: 900; font-family: 'JetBrains Mono'; font-size: 0.8rem;">FUTURE</span>
+                            <span class="subject-category-tag" style="background: var(--primary-red); color: #000; font-size: 0.6rem;">AMK_READY</span>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: #fff;">AMK 전문 CE 로드맵</h4>
+                        <ul style="font-size: 0.8rem; color: var(--text-muted); padding-left: 1rem; list-style-type: square;">
+                            <li style="margin-bottom: 0.4rem;">반도체 부트캠프 트러블슈팅</li>
+                            <li style="margin-bottom: 0.4rem;">산업기사 및 OPIc IH/AL 취득</li>
+                            <li>AMK 합격 및 가동률 극대화 기여</li>
+                        </ul>
+                        <div style="margin-top: 1rem; font-family: 'JetBrains Mono'; font-size: 0.6rem; color: var(--primary-red); font-weight: 800;">
+                            >> MISSION: UPTIME_MAX
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
             </div>
         </div>
-
-        <!-- 성장 그래프 섹션 -->
-        <div class="chart-container">
-            <svg class="growth-line-svg" preserveAspectRatio="none" viewBox="0 0 100 100">
-                <path d="M5,95 Q40,95 95,5" fill="none" stroke="var(--primary-red)" stroke-width="3" stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="300">
-                    <animate attributeName="stroke-dashoffset" from="300" to="0" dur="3s" fill="freeze" />
-                </path>
-            </svg>
-
-            <div class="glow-point animate-in" style="bottom: 5%; left: 5%; animation-delay: 0.1s;"></div>
-            <div class="glow-point animate-in" style="bottom: 30%; left: 45%; animation-delay: 1.5s;"></div>
-            <div class="glow-point animate-in" style="bottom: 95%; left: 95%; animation-delay: 2.9s;"></div>
-
-            <!-- 2024: Foundation -->
-            <div class="milestone-card animate-in" style="bottom: 5%; left: 2%; animation-delay: 0.5s;">
-                <span class="milestone-year">2024</span>
-                <div class="milestone-title">엔지니어링 기초 확립</div>
-                <ul class="milestone-list">
-                    <li>3D CAD (SolidWorks) 기반 기구 설계 기초 습득</li>
-                    <li>디지털 논리 회로 및 상태 축소 이론 학습</li>
-                    <li>전기회로(R/L/C) 분석 역량 강화</li>
-                </ul>
-            </div>
-
-            <!-- 2025: Specialization -->
-            <div class="milestone-card animate-in" style="bottom: 40%; left: 33%; animation-delay: 1.8s;">
-                <span class="milestone-year">2025</span>
-                <div class="milestone-title">전공 심화 및 실무 응용</div>
-                <ul class="milestone-list">
-                    <li>PLC 시퀀스 제어 및 PTP 로봇 제어 실습</li>
-                    <li>실시간 데이터 로깅 시스템 구축 및 트러블슈팅</li>
-                    <li>Vibe Coding: AI 협업 기술 문서 최적화 역량 내재화</li>
-                </ul>
-            </div>
-
-            <!-- 2026: Future Goal -->
-            <div class="milestone-card animate-in" style="top: 0%; left: 66%; animation-delay: 3s;">
-                <span class="milestone-year">2026 & FUTURE</span>
-                <div class="milestone-title">AMK 합격 및 전문CE 로드맵</div>
-                <ul class="milestone-list">
-                    <li>(예정) 반도체 부트캠프 몰입형 교육 이수</li>
-                    <li>(목표) 산업기사 자격 취득 및 OPIc IH 달성</li>
-                    <li>(목표) AMK 유지보수 엔지니어(CE) 합격</li>
-                </ul>
-            </div>
         </div>
+
     </main>
 
     <footer>
