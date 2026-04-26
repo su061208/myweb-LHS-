@@ -790,14 +790,14 @@ footer {
 
 .schematic-arm {
     position: fixed;
-    right: -100px;
-    bottom: -50px;
+    left: 20px;
+    bottom: 20px;
     width: 800px;
     height: 800px;
     opacity: 0.25; /* More visible */
     z-index: -1;
     pointer-events: none;
-    transform: rotate(-10deg);
+    transform: rotate(10deg);
     transition: all 1.5s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
