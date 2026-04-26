@@ -792,28 +792,21 @@ footer {
     position: fixed;
     left: 20px;
     bottom: 20px;
-    width: 800px;
-    height: 800px;
-    opacity: 0.25; /* More visible */
+    width: 750px;
+    height: 750px;
+    opacity: 0.4; /* Slightly more visible and sharp */
     z-index: -1;
     pointer-events: none;
-    transform: rotate(10deg);
-    transition: all 1.5s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-body:hover .schematic-arm {
-    opacity: 0.45;
-    transform: rotate(0deg) scale(1.05);
+    will-change: transform; /* Optimize for movement */
 }
 
 .schematic-arm path, .schematic-arm circle, .schematic-arm rect {
     stroke: var(--primary-red);
-    stroke-width: 2; /* Thicker strokes for clarity */
+    stroke-width: 2;
 }
 
 .schematic-arm text {
     fill: var(--primary-red);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
     font-weight: bold;
 }
